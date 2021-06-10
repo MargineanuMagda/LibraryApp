@@ -12,3 +12,4 @@ Aceasta aplicatie este destinata:
 ![image](https://user-images.githubusercontent.com/79506808/121543153-60125100-ca11-11eb-8985-2255683a63ff.png)
 ![image](https://user-images.githubusercontent.com/79506808/121543194-67395f00-ca11-11eb-869f-d5b05c3d0529.png)
 
+ Ca server de BD am folosit MYSQL :)--
