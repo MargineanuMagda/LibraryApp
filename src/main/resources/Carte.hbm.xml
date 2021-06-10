@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.Carte" table="carti" schema="biblioteca">
+        <id name="ISBN">
+            <column name="ISBN" sql-type="bigint"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="nume">
+            <column name="nume" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="autor">
+            <column name="autor" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="editura">
+            <column name="editura" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="disponibilitate">
+            <column name="disponibilitate" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

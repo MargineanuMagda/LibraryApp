@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="625.0" prefWidth="473.0" stylesheets="@loginStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="123.0" prefHeight="524.0" prefWidth="502.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Autentificare">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="315.0" prefWidth="403.0">
+                     <children>
+                        <Label layoutX="233.0" layoutY="257.0" prefHeight="25.0" prefWidth="87.0" text="username" />
+                        <TextField fx:id="usernameTxt" layoutX="326.0" layoutY="257.0" />
+                        <Label layoutX="233.0" layoutY="294.0" prefHeight="25.0" prefWidth="87.0" text="parola" />
+                        <Button layoutX="363.0" layoutY="398.0" mnemonicParsing="false" onAction="#autentificare" text="Autentificare" />
+                        <Hyperlink layoutX="232.0" layoutY="224.0" onAction="#changeTab" text="Nu ai cont? Inregistreaza-te aici" />
+                        <ImageView fitHeight="171.0" fitWidth="161.0" layoutX="320.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Library-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Hyperlink layoutX="329.0" layoutY="329.0" text="Mi-am uitat parola" />
+                        <PasswordField fx:id="parolaTxt" layoutX="326.0" layoutY="294.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Cont nou">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="73.0" prefHeight="18.0" prefWidth="83.0" text="Nume" />
+                        <Label layoutX="25.0" layoutY="115.0" prefHeight="18.0" prefWidth="83.0" text="CNP" />
+                        <TextField fx:id="numeField" layoutX="108.0" layoutY="69.0" />
+                        <TextField  fx:id="cnpField" layoutX="108.0" layoutY="112.0" />
+                        <Label layoutX="25.0" layoutY="155.0" prefHeight="18.0" prefWidth="83.0" text="Telefon" />
+                        <TextField fx:id="telField" layoutX="108.0" layoutY="151.0" />
+                        <Label layoutX="5.0" layoutY="367.0" prefHeight="37.0" prefWidth="92.0" text="ID UNIC GENERAT" />
+                        <Label layoutX="245.0" layoutY="246.0" prefHeight="18.0" prefWidth="83.0" text="Parola" />
+                        <PasswordField fx:id="passField" layoutX="329.0" layoutY="243.0" />
+                        <PasswordField fx:id="pass2Field" layoutX="329.0" layoutY="289.0" />
+                        <Label layoutX="236.0" layoutY="292.0" prefHeight="18.0" prefWidth="92.0" text="Parola confirmata" />
+                        <TextArea fx:id="adrField" layoutX="67.0" layoutY="233.0" prefHeight="72.0" prefWidth="156.0" />
+                        <Label layoutX="25.0" layoutY="203.0" prefHeight="18.0" prefWidth="83.0" text="Adresa" />
+                        <Button layoutX="329.0" layoutY="361.0" mnemonicParsing="false" onAction="#contNou" text="Creeaza cont nou" />
+                        <Label fx:id="codUnic" layoutX="114.0" layoutY="366.0" prefHeight="38.0" prefWidth="157.0" />
+                        <TextField fx:id="userField" layoutX="329.0" layoutY="199.0" />
+                        <Label layoutX="245.0" layoutY="203.0" prefHeight="18.0" prefWidth="83.0" text="Username" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="35.0" layoutY="31.0" prefHeight="107.0" prefWidth="365.0" text="Bun venit !" textFill="WHEAT">
+         <font>
+            <Font name="Brush Script MT Italic" size="79.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

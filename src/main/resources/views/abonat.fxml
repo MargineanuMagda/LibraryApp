@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="652.0" prefWidth="539.0" stylesheets="@loginStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AbonatController">
+    <children>
+        <TabPane fx:id="tabAbonat" layoutX="41.0" layoutY="113.0" prefHeight="547.0" prefWidth="457.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Catalog">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="441.0">
+                            <children>
+                                <TableView fx:id="tableTab1" layoutX="15.0" layoutY="175.0" prefHeight="218.0" prefWidth="433.0">
+                                    <columns>
+                                        <TableColumn fx:id="isbnColumnTab1" prefWidth="66.20001220703125" text="COD ISBN" />
+                                        <TableColumn fx:id="numeColumnTab1" prefWidth="116.39999389648438" text="NUME" />
+                                        <TableColumn fx:id="autorColumnTab1" prefWidth="103.60000610351562" text="AUTOR" />
+                                        <TableColumn fx:id="edituraColumnTab1" prefWidth="72.20001220703125" text="EDITURA" />
+                                        <TableColumn fx:id="statusColumnTab1" prefWidth="75.199951171875" text="STATUS" />
+                                    </columns>
+                                </TableView>
+                                <Label layoutX="-2.0" layoutY="43.0" prefHeight="22.0" prefWidth="65.0" text="Nume" />
+                                <Label layoutX="251.0" layoutY="43.0" prefHeight="22.0" prefWidth="65.0" text="Autor" />
+                                <TextField fx:id="numeField" layoutX="64.0" layoutY="42.0" prefHeight="26.0" prefWidth="118.0" />
+                                <TextField fx:id="autorField" layoutX="317.0" layoutY="42.0" prefHeight="26.0" prefWidth="98.0" />
+                                <CheckBox fx:id="numeCheck" layoutX="191.0" layoutY="46.0" mnemonicParsing="false" />
+                                <CheckBox fx:id="autorCheck" layoutX="421.0" layoutY="46.0" mnemonicParsing="false" />
+                                <Label layoutX="99.0" layoutY="89.0" prefHeight="22.0" prefWidth="65.0" text="COD ISBN" />
+                                <TextField fx:id="codField" layoutX="165.0" layoutY="88.0" />
+                                <CheckBox fx:id="codCheck" layoutX="324.0" layoutY="92.0" mnemonicParsing="false" />
+                                <Button layoutX="301.0" layoutY="114.0" mnemonicParsing="false" onAction="#cautaCarti" text="CAUTA" />
+                        <Button id="imp" layoutX="301.0" layoutY="407.0" mnemonicParsing="false" onAction="#selectareCarteImprumut" text="IMPRUMUTA" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Imprumut carte">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="27.0" layoutY="81.0" prefHeight="29.0" prefWidth="111.0" text="Nume" />
+                                <Label layoutX="27.0" layoutY="129.0" prefHeight="29.0" prefWidth="111.0" text="Autor" />
+                                <Label layoutX="27.0" layoutY="178.0" prefHeight="29.0" prefWidth="111.0" text="Editura" />
+                                <Button layoutX="271.0" layoutY="267.0" mnemonicParsing="false" onAction="#imprumutaCarte" text="IMPRUMUTA" />
+                        <Label layoutX="27.0" layoutY="38.0" prefHeight="29.0" prefWidth="111.0" text="COD ISBN" />
+                        <Label fx:id="isbnLbl" layoutX="166.0" layoutY="38.0" prefHeight="30.0" prefWidth="154.0" />
+                        <Label fx:id="numeLbl" layoutX="166.0" layoutY="80.0" prefHeight="30.0" prefWidth="154.0" />
+                        <Label fx:id="autorLbl" layoutX="166.0" layoutY="128.0" prefHeight="30.0" prefWidth="154.0" />
+                        <Label fx:id="edituraLbl" layoutX="166.0" layoutY="177.0" prefHeight="30.0" prefWidth="154.0" />
+                        <Label layoutX="27.0" layoutY="221.0" prefHeight="29.0" prefWidth="111.0" text="Data restituire" />
+                        <Label fx:id="dataLbl" layoutX="166.0" layoutY="220.0" prefHeight="30.0" prefWidth="154.0" />
+                        <Button fx:id="backButton" layoutX="271.0" layoutY="344.0" mnemonicParsing="false" onAction="#inapoiCatalog" text="Inapoi la catalog" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Lista imprumuturi">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableTab3" layoutX="15.0" layoutY="118.0" prefHeight="307.0" prefWidth="428.0">
+                          <columns>
+                              <TableColumn fx:id="idColumnTab3" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="isbnColumnTab3" prefWidth="47.800018310546875" text="Cod ISBN" />
+                              <TableColumn fx:id="numeColumnTab3" minWidth="0.0" prefWidth="141.80003356933594" text="Nume" />
+                              <TableColumn fx:id="dataImpColumnTab3" prefWidth="86.5999755859375" text="Data imprumut" />
+                              <TableColumn fx:id="dataResColumnTab3" prefWidth="75.60003662109375" text="Data restituire" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Setari cont">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="134.0" fitWidth="138.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/avatar.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="134.0" layoutY="64.0" prefHeight="30.0" prefWidth="94.0" text="Nume" />
+                                <TextField fx:id="numeTab4" disable="true" layoutX="241.0" layoutY="64.0" prefHeight="30.0" prefWidth="142.0" />
+                                <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="400.0" layoutY="63.0" onMouseClicked="#editNume" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/edit1.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="134.0" layoutY="116.0" prefHeight="30.0" prefWidth="94.0" text="Username" />
+                                <TextField fx:id="userTab4" disable="true" layoutX="241.0" layoutY="116.0" prefHeight="30.0" prefWidth="142.0" />
+                                <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="400.0" layoutY="115.0" onMouseClicked="#editUsername" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/edit1.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="41.0" layoutY="179.0" prefHeight="30.0" prefWidth="94.0" text="Telefon" />
+                                <TextField fx:id="telTab4" disable="true" layoutX="157.0" layoutY="179.0" prefHeight="30.0" prefWidth="142.0" />
+                                <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="320.0" layoutY="178.0" onMouseClicked="#editTel" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/edit1.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="39.0" layoutY="228.0" prefHeight="30.0" prefWidth="94.0" text="Adresa" />
+                                <TextArea fx:id="adrTab4" disable="true" layoutX="157.0" layoutY="228.0" prefHeight="65.0" prefWidth="206.0" />
+                                <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="384.0" layoutY="227.0" onMouseClicked="#editAdr" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/edit1.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="39.0" layoutY="320.0" prefHeight="30.0" prefWidth="94.0" text="Parola " />
+                                <Label fx:id="codTab4" layoutY="8.0" prefHeight="32.0" prefWidth="258.0" text="COD UNIC :                                         " />
+                                <PasswordField fx:id="oldPassTab4" disable="true" layoutX="154.0" layoutY="320.0" prefHeight="32.0" prefWidth="150.0" />
+                                <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="331.0" layoutY="320.0" onMouseClicked="#editParola" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/edit1.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="41.0" layoutY="368.0" prefHeight="30.0" prefWidth="94.0" text="Parola noua " />
+                                <PasswordField fx:id="newPassTab4" disable="true" layoutX="154.0" layoutY="367.0" prefHeight="32.0" prefWidth="150.0" />
+                        <Button layoutX="298.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#modificaInformatii" text="Salveaza modificari" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Logout">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button onMouseClicked="#handleLogout" layoutX="262.0" layoutY="356.0" mnemonicParsing="false" text="Delogare" />
+                                <Label layoutX="226.0" layoutY="312.0" prefHeight="28.0" prefWidth="139.0" text="De aici te poti deloga" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <ImageView fitHeight="113.0" fitWidth="155.0" layoutX="27.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/Library-icon.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="140.0" layoutY="40.0" prefHeight="49.0" prefWidth="360.0" text="Biblioteca Centrală Universitară &quot;Lucian Blaga&quot; Cluj-Napoca" />
+    </children>
+</AnchorPane>

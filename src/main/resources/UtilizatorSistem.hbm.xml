@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.UtilizatorSistem" table="utilizatori" schema="biblioteca">
+        <id name="codUnic">
+            <column name="codUnic" sql-type="bigint"/>
+        </id>
+        <property name="CNP">
+            <column name="CNP" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="nume">
+            <column name="nume" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="telefon">
+            <column name="telefon" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="adresa">
+            <column name="adresa" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="tip" >
+            <column name="tip" sql-type="varchar(15)"  length="15" not-null="true"/>
+            <type name="model.enumMapping.MyEnumUserType">
+            </type>
+            
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="parola">
+            <column name="parola" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

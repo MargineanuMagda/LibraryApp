@@ -1,0 +1,108 @@
+.root{
+    -fx-background-image: url("../img/main.jpg");
+    -fx-background-size: 500px;
+}
+
+.tab-pane.tab.text{
+    -fx-font-size: 20px;
+    -fx-font-family: Candara ;
+    -fx-alignment: center;
+    -fx-font-weight:bold;
+    -fx-text-fill: wheat;
+    -fx-background-color: #06181f;
+}
+.tab-pane{
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:50px;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: gray;
+    -fx-background-radius:  10px;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #3c3c3c;
+
+
+    -fx-background-radius:  20px;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: wheat;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab {
+
+    -fx-padding: 2em 0.1em 2em 0.1em;
+}
+.label{
+
+    -fx-font-family:Impact ;
+    -fx-alignment: center;
+    -fx-text-fill: wheat;
+    -fx-background-color: #630000;
+}
+.radio-button{
+    -fx-font-family:Impact ;
+    -fx-alignment: center;
+    -fx-text-fill: wheat;
+    -fx-background-color: #630000;
+}
+.button{
+    -fx-background-image: url("../img/book1.png");
+    -fx-background-color: transparent;
+    -fx-text-fill: #630000;
+    -fx-font-family:Impact ;
+    -fx-alignment: center;
+    -fx-pref-width: 130px;
+    -fx-pref-height: 49px;
+}
+.table-row-cell{
+//-fx-font-size: 14;
+    -fx-background-color: #6b011f;
+    -fx-text-fill: wheat;
+
+}
+.table-row-cell:filled:selected:default.text{
+    -fx-text-fill: wheat;
+}
+.table-row-cell:default.text{
+    -fx-text-fill: black;
+    -fx-background-color: gray;
+}
+.table-cell {
+    -fx-text-fill:#dadebd gray;
+}
+.table-view{
+    -fx-background-color: #6b011f;
+    -fx-text-fill: wheat;
+}
+#btnAdd{
+    -fx-background-image: url("../img/plus2.png");
+    -fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+}
+.hyperlink{
+    -fx-background-color: #ffd880;
+}
+.text-field:disabled {
+   -fx-opacity: 0.85;
+}
+.text-area:disabled{
+    -fx-opacity: 0.9;
+}
